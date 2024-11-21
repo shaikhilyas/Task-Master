@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: taskmaster
-  replicas: 2 # Number of replicas that will be created for this deployment
+  replicas: 1 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
@@ -33,6 +33,6 @@ spec:
     app: taskmaster
   ports:
     - protocol: "TCP"
-      port: 80
+      port: 8080
       targetPort: 8080 
   type: ClusterIP # type of the service.
